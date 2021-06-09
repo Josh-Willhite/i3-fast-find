@@ -1,0 +1,7 @@
+#+TITLE: Readme
+
+* i3 config
+#+begin_example
+# switch focus between windows
+bindsym $mod+Return exec  "bash -c i3-fast-find | dmenu | xargs -I {} i3-fast-find -focus {}"
+#+end_example
