@@ -34,7 +34,7 @@ func main() {
 	n.getWindows(tree.Root)
 
 	if focus != "" {
-		_, err := i3.RunCommand(fmt.Sprintf("[title=\"%s\"] focus", n.names[focus]))
+		_, err := i3.RunCommand(fmt.Sprintf(`[title="%s"] focus`, n.names[focus]))
 		if err != nil {
 			fmt.Printf("Failed with: %s", err)
 		}
@@ -42,6 +42,6 @@ func main() {
 	}
 
 	for k, _ := range n.names {
-		fmt.Println(k)
+		fmt.Printf("%s\n", k)
 	}
 }
