@@ -1,7 +1,7 @@
 #+TITLE: Readme
 
-* i3 config
+Compile go app and then place it along with ff.sh in your path, now reference it in i3 config like this:
 #+begin_example
 # switch focus between windows
-bindsym $mod+Return exec  "bash -c i3-fast-find | dmenu | xargs -I {} i3-fast-find -focus {}"
+bindsym $mod+Return exec  ff.sh
 #+end_example
